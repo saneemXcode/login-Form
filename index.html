@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <div class="borderLine"></div>
+        <form action="#" id="loginForm"> 
+            <h2>Sign Up</h2>
+            <div class="inputBox">
+                <input type="text" required="required" id="username"> 
+                <span>Username</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required" id="password"> 
+                <span>Password</span>
+                <i></i>
+            </div>
+            <div class="links">
+                <a href="#">Forgot Password</a>
+                <a href="#">Singup</a>
+            </div>
+            <input type="button" value="Login" onclick="validateFields()"> 
+        </form>
+    </div>
+    <script>
+        function showMessage() {
+            var message = "Login Successfully";
+            alert(message);
+            document.getElementById("username").value = "";
+            document.getElementById("password").value = ""; 
+        }
+
+        function validateFields() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "" || password === "") {
+                alert("Username and password cannot be empty. Please fill in both fields.");
+            } else {
+                
+                showMessage();
+            }
+        }
+    </script>
+</body>
+</html>
